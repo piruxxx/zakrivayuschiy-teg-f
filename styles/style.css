@@ -15,6 +15,146 @@
 */
 
 .page {
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  background: var(--background) no-repeat fixed center / cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: var(--text-font-weight);
 }
+
+.content-size {
+  inline-size: var(--content-size);
+}
+
+.header {
+  margin: var(--header-margin);
+  border: 2px solid var(--accent-color);
+  padding: var(--header-padding);
+  font-family: var(--font-family-accent);
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.header__logo {
+  font-size: var(--logo-size);
+}
+
+.header__title {
+  margin-block-start: 20px;
+  font-size: var(--title-size);
+}
+
+.header__theme-menu {
+  margin-block-start: 25px;
+  font-size: var(--text-size-m);
+}
+
+.theme-menu__list {
+  
+}
+
+.content-section {
+  margin: var(--header-margin);
+  border: 2px solid var(--accent-color);
+  background-color: var(--primary-color);
+}
+
+.content-section__title {
+  margin: var(--section-title);
+  font-size: var(--text-size-m);
+}
+
+.content-section__image {
+  block-size: var(--content-size);
+}
+
+.content-section__text {
+  margin: 25px;
+  font-size: var(--text-size-s);
+}
+
+.content-section__text p {
+  margin-block-end: 25px;
+}
+
+.content-section__text p:last-child {
+  margin-block-end: 0;
+}
+
+/* КНОПКИ */
+
+.button {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  font-family: var(--font-family-accent);
+  font-size: var(--text-size-s);
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  min-inline-size: 130px; /* возможно нужно по другому сделать */
+  min-block-size: 38px; /* возможно нужно по другому сделать */
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::after {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--secondary-color);
+  mix-blend-mode: difference;
+}
+
+.card__button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  margin: 25px;
+}
+
+.card__like-button {
+  /* padding: 12px 0; */
+  
+}
+
+.card__like-button:active {
+
+}
+
+.card__like-button:hover {
+  /* transform: translateX(0); */
+}
+
+.card__like-button:hover::after {
+  /* transform: scaleX(1); */
+}
+
+@media (width <= 375px) {
+  
+}
+
+
