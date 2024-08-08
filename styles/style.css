@@ -19,7 +19,7 @@
   background: fixed var(--background-pattern) no-repeat center / cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--font-weight-text);
+  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .header {
@@ -40,6 +40,7 @@
   margin-block-start: 20px;
   font-size: var(--title-size);
   text-transform: uppercase;
+  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .header__theme-menu {
@@ -127,6 +128,7 @@
 .card__title {
   margin: var(--section-title-spacing);
   font-size: var(--text-size-m);
+  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .card__image {
@@ -194,6 +196,7 @@
   font-size: var(--text-size-s);
   line-height: 21px;
   text-transform: uppercase;
+  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .modal__button {
