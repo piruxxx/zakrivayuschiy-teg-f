@@ -5,48 +5,110 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-html.theme-light {
-    --title-font-weight: 700;
-    --text-font-weight: 400;
+:root.theme-light {
+  --font-weight-title: 700;
+  --font-weight-text: 400;
 
-    --primary-color: #FFFFFF; /* Основной цвет */
-    --accent-color: #000000; /* Акцентный цвет */
-    --secondary-color: #FFFFFF; /* Вторичный цвет */
+  --color-primary: #ffffff;
+  --color-accent: #000000;
+  --color-secondary: #ffffff;
+  --color-heart: #ff0000;
+  --color-heart-contour: var(--color-accent);
+  --color-heart-sparks: var(--color-heart);
+  --color-heart-body: var(--color-accent);
+  --color-heart-core: var(--color-heart);
 
-    --background:
-    repeating-linear-gradient(0deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
+  --gradient-light: #e7e7e7;
+  --gradient-dark: #1a1a1a;
+  --grid-line-color: #d3d3d3;
+
+  --background-pattern: repeating-linear-gradient(
+      0deg,
+      var(--grid-line-color),
+      var(--grid-line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid-line-color),
+      var(--grid-line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
 }
 
-html.theme-dark {
-    --title-font-weight: 785;
-    --text-font-weight: 465;
+:root.theme-dark {
+  --font-weight-title: 785;
+  --font-weight-text: 465;
 
-    --primary-color: #000000; /* Основной цвет */
-    --accent-color: #00CC14; /* Акцентный цвет */
-    --secondary-color: #00CC14; /* Вторичный цвет */
+  --color-primary: #000000;
+  --color-accent: #00cc14;
+  --color-secondary: var(--color-accent);
+  --color-heart: #ff0000;
+  --color-heart-contour: var(--color-accent);
+  --color-heart-sparks: var(--color-heart);
+  --color-heart-body: var(--color-accent);
+  --color-heart-core: var(--color-accent);
 
-    --background:
-    repeating-linear-gradient(0deg, #000, #000 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px),
-    linear-gradient(180deg, #007F0C 0%, #004306 100%);
+  --gradient-light: #007f0c;
+  --gradient-dark: #004306;
+  --grid-line-color: #000;
+
+  --background-pattern: repeating-linear-gradient(
+      0deg,
+      var(--grid-line-color),
+      var(--grid-line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid-line-color),
+      var(--grid-line-color) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --title-font-weight: 785;
-        --text-font-weight: 465;
-    
-        --primary-color: #000000; /* Основной цвет */
-        --accent-color: #00CC14; /* Акцентный цвет */
-        --secondary-color: #00CC14; /* Вторичный цвет */
+  :root {
+    --font-weight-title: 785;
+    --font-weight-text: 465;
 
-        --background:
-        repeating-linear-gradient(0deg, #000, #000 2px, transparent 2px, transparent 4px),
-        repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px),
-        linear-gradient(180deg, #007F0C 0%, #004306 100%);
-    }
+    --color-primary: #000000;
+    --color-accent: #00cc14;
+    --color-secondary: var(--color-accent);
+    --color-heart: #ff0000;
+    --color-heart-contour: var(--color-accent);
+    --color-heart-sparks: var(--color-heart);
+    --color-heart-body: var(--color-accent);
+    --color-heart-core: var(--color-accent);
+
+    --gradient-light: #007f0c;
+    --gradient-dark: #004306;
+    --grid-line-color: #000;
+
+    --background-pattern: repeating-linear-gradient(
+        0deg,
+        var(--grid-line-color),
+        var(--grid-line-color) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        var(--grid-line-color),
+        var(--grid-line-color) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        180deg,
+        var(--gradient-light) 0%,
+        var(--gradient-dark) 100%
+      );
+  }
 }
-
-
