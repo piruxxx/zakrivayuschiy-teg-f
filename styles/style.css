@@ -16,7 +16,8 @@
 .page {
   color: var(--color-accent);
   font-family: var(--font-primary);
-  background: fixed var(--background-pattern) no-repeat center / cover;
+  background: var(--background-pattern) no-repeat center / cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--font-weight-text);
@@ -34,6 +35,7 @@
 .header__logo {
   font-size: var(--logo-size);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header__title {
@@ -117,7 +119,8 @@
 .main {
   display: grid;
   gap: 50px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
+  justify-items: center;
 }
 
 .card {
@@ -128,12 +131,15 @@
 .card__title {
   margin: var(--section-title-spacing);
   font-size: var(--text-size-m);
-  font-variation-settings: 'wght' var(--font-weight-text);
+  font-variation-settings: 'wght' var(--font-weight-title);
+  line-height: 22px;
 }
 
 .card__image {
   position: relative;
   block-size: var(--content-width);
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
 }
 
 .card__watermark {
@@ -151,6 +157,7 @@
 .card__text {
   margin: 25px;
   font-size: var(--text-size-m);
+  line-height: 21px;
 }
 
 .card__text p {
@@ -168,10 +175,20 @@
   margin: 25px;
 }
 
-.footer {
+.card__icon-button {
   display: flex;
-  justify-content: center;
-  margin: 50px auto 100px;
+  border: 2px solid transparent;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--color-accent);
+  transition: border-color 0.3s ease;
 }
 
 .modal::backdrop {
@@ -182,9 +199,10 @@
   display: grid;
   grid-template-columns: 39px 1fr;
   align-items: center;
-  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  padding: 30px clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem);
+  width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  padding: 30px clamp(2.4375rem, 2.6356rem + -0.8451vw, 1.875rem);
   color: var(--color-accent);
+  border-width: 2px;
   background: var(--color-primary);
   grid-gap: 30px 20px;
 }
@@ -195,11 +213,11 @@
   font-size: var(--text-size-s);
   line-height: 21px;
   text-transform: uppercase;
-  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .modal__button {
   grid-column: span 2;
+  text-transform: uppercase;
 }
 
 .button {
@@ -238,7 +256,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 0px 0px var(--color-accent);
 }
 
 .button__text {
@@ -301,18 +319,16 @@
   filter: invert(75%);
 }
 
-@keyframes select-shake {
-  to {
-    transform: translateX(0);
-  }
-  from {
-    transform: translateX(4px);
-  }
-}
-
 @supports (-webkit-text-stroke: 1px var(--color-primary)) {
   .card__watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--color-primary);
+  }
+}
+
+@media (width <= 375px) {
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
   }
 }

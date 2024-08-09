@@ -3,7 +3,7 @@
 :root {
   /* Fonts */
   --font-primary: "Inter", sans-serif;
-  --font-accent: "PressStart2P", monospace;
+  --font-accent: "PressStart2P", fantasy;
   --font-weight-title: 700;
   --font-weight-text: 400;
   --text-size-s: 0.875rem;
@@ -54,3 +54,4 @@
     ),
     linear-gradient(180deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
 }
+

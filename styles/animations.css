@@ -18,22 +18,6 @@ contour — контур;
 main-body — основное тело сердца;
 sparks — искры вокруг. */
 
-.card__icon-button {
-  display: flex;
-  border: 2px solid transparent;
-  background-color: var(--color-primary);
-  cursor: pointer;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--color-accent);
-  transition: border-color 0.3s ease;
-}
-
 .heart {
   transform-origin: center;
 }
@@ -44,45 +28,45 @@ sparks — искры вокруг. */
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart);
-  transition: 0.3s 0.1s;
+  transition: 0.3s linear 0.06s;
 }
 
 .main-body {
   opacity: 0;
   fill: var(--color-heart-body);
-  transition: opacity 0.3s;
+  transition: opacity 0.3s linear;
 }
 
 .like-icon:hover .main-body {
   opacity: 1;
-  transition: opacity 0.3s 0.05s;
+  transition-delay: 0.05s;
 }
 
 .like-icon:active .main-body {
   fill: var(--color-heart);
-  transition: 0.3s 0.05s;
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .main-body {
   opacity: 1;
   fill: var(--color-heart);
-  transition: 0.3s 0.05s;
+  transition-delay: 0.05s;
 }
 
 .core {
   opacity: 0;
   fill: var(--color-heart-body);
-  transition: opacity 0.3s 0.03s;
+  transition: opacity 0.3s linear 0.03s;
 }
 
 .like-icon:hover .core {
   opacity: 1;
-  transition: opacity 0.3s;
+  transition-delay: 0s;
 }
 
 .like-icon:active .core {
   fill: var(--color-heart);
-  transition: 0.3s;
+  transition-delay: 0s;
 }
 
 .like-icon.is-liked .core {
@@ -116,5 +100,14 @@ sparks — искры вокруг. */
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes select-shake {
+  to {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(4px);
   }
 }
