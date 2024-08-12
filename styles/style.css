@@ -18,9 +18,9 @@
   font-family: var(--font-primary);
   background: var(--background-pattern) no-repeat center / cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--font-weight-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--font-weight-text);
 }
 
 .header {
