@@ -18,9 +18,9 @@
   font-family: var(--font-primary);
   background: var(--background-pattern) no-repeat center / cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" var(--font-weight-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--font-weight-text);
 }
 
 .header {
@@ -42,7 +42,7 @@
   margin-block-start: 20px;
   font-size: var(--title-size);
   text-transform: uppercase;
-  font-variation-settings: 'wght' var(--font-weight-text);
+  font-variation-settings: "wght" var(--font-weight-text);
 }
 
 .header__theme-menu {
@@ -118,9 +118,9 @@
 
 .main {
   display: grid;
+  justify-items: center;
   gap: 50px;
   margin: 0 auto 100px;
-  justify-items: center;
 }
 
 .card {
@@ -131,15 +131,15 @@
 .card__title {
   margin: var(--section-title-spacing);
   font-size: var(--text-size-m);
-  font-variation-settings: 'wght' var(--font-weight-title);
   line-height: 22px;
+  font-variation-settings: "wght" var(--font-weight-title);
 }
 
 .card__image {
   position: relative;
-  block-size: var(--content-width);
   border-top: 2px solid var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
+  block-size: var(--content-width);
 }
 
 .card__watermark {
@@ -200,9 +200,9 @@
   grid-template-columns: 39px 1fr;
   align-items: center;
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  border-width: 2px;
   padding: 30px clamp(2.4375rem, 2.6356rem + -0.8451vw, 1.875rem);
   color: var(--color-accent);
-  border-width: 2px;
   background: var(--color-primary);
   grid-gap: 30px 20px;
 }
